@@ -2,7 +2,13 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 1rem;
+  font-family: 'Overpass';
+  color: hsl(0, 0%, 100%);
+  
+
+
+
 }
 
 body {
@@ -13,4 +19,30 @@ body {
   min-height: 100vh;
   padding: 24px;
   font-family: 'Overpass', sans-serif; 
+}
+
+main {
+  background-color: hsl(213, 19%, 18%);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.submit-btn {
+  background-color:hsl(25, 97%, 53%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.rating-button {
+  background-color:hsl(217, 12%, 63%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
 }
