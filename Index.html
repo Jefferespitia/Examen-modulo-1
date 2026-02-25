@@ -9,13 +9,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <title>Examen-modulo1</title>
+    <script> document.querySelector(".submit-btn").addEventListener("click", function(event) {
+        event.preventDefault();
+        const main = document.getElementById("principal");
+        main.innerHTML = document.getElementById("Gracias").innerHTML;
+      });</script>
     
    
     </style>
   </head>
   <body>
-    <main>
+    <main id="principal">
     
+        <img src="assets/icon-star.svg" alt="estrella" class="star-icon" />
         <h1>Como lo hicimos?</h1>
         <p>
             Por favor, haznos saber como lo hicimos con tu solicitud de soporte.
@@ -32,7 +38,22 @@
         </div>
         <button class="submit-btn">Enviar</button>
     
-    </main>
 
+    
+         <template id="Gracias">
+            <div class="Gracias">
+            <img src="assets/illustration-thank-you.svg" alt="Gracias" />
+            <h1>¡Gracias!</h1>
+            <p>
+                Agradecemos que te hayas tomado el tiempo de dar una calificacion.
+            <br>
+            Si alguna vez necesitas mas ayuda, no dudes en volver a ponerte en contacto con nosotros
+            </br>
+            </p>
+            </div>
+            </template>
+        </main>
+
+   
   </body>
 </html>
