@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <title>Examen-modulo1</title>
+    <script> 
+    document.addEventListener("DOMContentLoaded", function() {
+      const ratingButtons = document.querySelectorAll(".rating-button");
+      ratingButtons.forEach(button => {
+     button.addEventListener("click", function() {
+        ratingButtons.forEach(btn => btn.classList.remove("selected"));
+        this.classList.add("selected");
+        });
+      });
+    });
+    document.querySelector(".submit-btn").addEventListener("click", function(event) {
+        event.preventDefault();
+        const main = document.getElementById("principal");
+        main.innerHTML = document.getElementById("Gracias").innerHTML;
+      });</script>
+    
+   
+    </style>
+  </head>
+  <body>
+    <main id="principal">
+    
+        <img src="assets/icon-star.svg" alt="estrella" class="star-icon" />
+        <h1>Como lo hicimos?</h1>
+        <p>
+            Por favor, haznos saber como lo hicimos con tu solicitud de soporte.
+            <br>
+                Todos los comentarios son bienvenidos para ayudarnos a mejorar nuestra oferta.
+            </br>
+        </p>
+        <div class="rating-buttons">
+          <button class="rating-button">1</button>
+          <button class="rating-button">2</button>
+          <button class="rating-button">3</button>
+          <button class="rating-button">4</button>
+          <button class="rating-button">5</button>
+        </div>
+        <button class="submit-btn">Enviar</button>
+    
+
+    
+         <template id="Gracias">
+            <div class="Gracias">
+            <img src="assets/illustration-thank-you.svg" alt="Gracias" />
+            <h1>¡Gracias!</h1>
+            <p>
+                Agradecemos que te hayas tomado el tiempo de dar una calificacion.
+            <br>
+            Si alguna vez necesitas mas ayuda, no dudes en volver a ponerte en contacto con nosotros.
+            </br>
+            </p>
+            </div>
+        </template>
+        </main>
+
+   
+  </body>
+</html>
