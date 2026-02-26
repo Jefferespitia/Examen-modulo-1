@@ -9,7 +9,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <title>Examen-modulo1</title>
-    <script> document.querySelector(".submit-btn").addEventListener("click", function(event) {
+    <script> 
+    document.addEventListener("DOMContentLoaded", function() {
+      const ratingButtons = document.querySelectorAll(".rating-button");
+      ratingButtons.forEach(button => {
+     button.addEventListener("click", function() {
+        ratingButtons.forEach(btn => btn.classList.remove("selected"));
+        this.classList.add("selected");
+        });
+      });
+    });
+    document.querySelector(".submit-btn").addEventListener("click", function(event) {
         event.preventDefault();
         const main = document.getElementById("principal");
         main.innerHTML = document.getElementById("Gracias").innerHTML;
@@ -51,7 +61,7 @@
             </br>
             </p>
             </div>
-            </template>
+        </template>
         </main>
 
    
